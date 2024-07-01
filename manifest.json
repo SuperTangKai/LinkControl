@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Link Control",
+  "version": "1.0",
+  "description": "管理页面上所有链接的打开方式，再也无须担心点开一个链接把当前页面覆盖了！",
+  "permissions": ["activeTab", "tabs", "scripting", "storage"],
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "action": {
+    "default_popup": "popup/popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "images/icon-16.png",
+    "48": "images/icon-48.png",
+    "128": "images/icon-96.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["scripts/initial.js"],
+      "matches": ["http://*/*", "https://*/*"],
+      "run_at": "document_end"
+    }
+  ]
+}

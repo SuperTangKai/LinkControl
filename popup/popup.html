@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      body {
+        width: 200px;
+      }
+      .box {
+        margin: 4px 0;
+        display: flex;
+        align-items: center;
+        height: 24px;
+        gap: 8px;
+      }
+      input {
+        margin: 0;
+        padding: 0;
+        cursor: pointer;
+      }
+      label {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <fieldset>
+      <legend>链接打开方式：</legend>
+      <div class="box">
+        <input type="radio" id="default" name="mode" value="default" />
+        <label for="default">默认</label>
+      </div>
+      <div class="box">
+        <input type="radio" id="blank" name="mode" value="blank" />
+        <label for="blank">新窗口</label>
+      </div>
+      <div class="box">
+        <input type="radio" id="self" name="mode" value="self" />
+        <label for="self">当前窗口</label>
+      </div>
+    </fieldset>
+    <script src="/scripts/popup.js"></script>
+  </body>
+</html>
