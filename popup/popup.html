@@ -5,14 +5,23 @@
     <style>
       body {
         width: 260px;
+        margin: 0;
+        padding: 10px 15px 20px;
+        font-size: 14px;
+        color: #444444;
+      }
+      h3 {
+        font-size: 18px;
+        line-height: 24px;
+        margin: 10px 0;
       }
       /* 选择器 */
       .box {
-        margin: 4px 0;
         display: flex;
         align-items: center;
-        height: 24px;
-        gap: 8px;
+        padding: 0 8px;
+        height: 32px;
+        gap: 10px;
       }
       input {
         margin: 0;
@@ -25,7 +34,7 @@
       .hr {
         margin: 20px 0;
         height: 1px;
-        background-color: #ccc;
+        background-color: #efefef;
       }
     </style>
   </head>
@@ -38,7 +47,7 @@
         name="site-mode"
         value="site-global"
       />
-      <label for="default">使用全局配置</label>
+      <label for="default">Use global settings</label>
     </div>
     <div class="box">
       <input
@@ -47,18 +56,18 @@
         name="site-mode"
         value="site-default"
       />
-      <label for="default">默认</label>
+      <label for="default">Use default</label>
     </div>
     <div class="box">
       <input type="radio" id="site-blank" name="site-mode" value="site-blank" />
-      <label for="blank">新窗口打开</label>
+      <label for="blank">Open links in a new Tab</label>
     </div>
     <div class="box">
       <input type="radio" id="site-self" name="site-mode" value="site-self" />
-      <label for="self">当前窗口打开</label>
+      <label for="self">Open links in current Tab</label>
     </div>
     <div class="hr"></div>
-    <h3>全局设置：</h3>
+    <h3>Global Settings</h3>
     <div class="box">
       <input
         type="radio"
@@ -66,7 +75,7 @@
         name="global-mode"
         value="global-default"
       />
-      <label for="default">默认</label>
+      <label for="default">Use default</label>
     </div>
     <div class="box">
       <input
@@ -75,7 +84,7 @@
         name="global-mode"
         value="global-blank"
       />
-      <label for="blank">新窗口打开</label>
+      <label for="blank">Open links in a new Tab</label>
     </div>
     <div class="box">
       <input
@@ -84,7 +93,7 @@
         name="global-mode"
         value="global-self"
       />
-      <label for="self">当前窗口打开</label>
+      <label for="self">Open links in current Tab</label>
     </div>
     <script src="/scripts/popup.js"></script>
   </body>
