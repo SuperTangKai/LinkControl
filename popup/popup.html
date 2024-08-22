@@ -4,8 +4,9 @@
     <meta charset="utf-8" />
     <style>
       body {
-        width: 200px;
+        width: 260px;
       }
+      /* 选择器 */
       .box {
         margin: 4px 0;
         display: flex;
@@ -21,24 +22,70 @@
       label {
         cursor: pointer;
       }
+      .hr {
+        margin: 20px 0;
+        height: 1px;
+        background-color: #ccc;
+      }
     </style>
   </head>
   <body>
-    <fieldset>
-      <legend>链接打开方式：</legend>
-      <div class="box">
-        <input type="radio" id="default" name="mode" value="default" />
-        <label for="default">默认</label>
-      </div>
-      <div class="box">
-        <input type="radio" id="blank" name="mode" value="blank" />
-        <label for="blank">新窗口</label>
-      </div>
-      <div class="box">
-        <input type="radio" id="self" name="mode" value="self" />
-        <label for="self">当前窗口</label>
-      </div>
-    </fieldset>
+    <h3 id="site"></h3>
+    <div class="box">
+      <input
+        type="radio"
+        id="site-global"
+        name="site-mode"
+        value="site-global"
+      />
+      <label for="default">使用全局配置</label>
+    </div>
+    <div class="box">
+      <input
+        type="radio"
+        id="site-default"
+        name="site-mode"
+        value="site-default"
+      />
+      <label for="default">默认</label>
+    </div>
+    <div class="box">
+      <input type="radio" id="site-blank" name="site-mode" value="site-blank" />
+      <label for="blank">新窗口打开</label>
+    </div>
+    <div class="box">
+      <input type="radio" id="site-self" name="site-mode" value="site-self" />
+      <label for="self">当前窗口打开</label>
+    </div>
+    <div class="hr"></div>
+    <h3>全局设置：</h3>
+    <div class="box">
+      <input
+        type="radio"
+        id="global-default"
+        name="global-mode"
+        value="global-default"
+      />
+      <label for="default">默认</label>
+    </div>
+    <div class="box">
+      <input
+        type="radio"
+        id="global-blank"
+        name="global-mode"
+        value="global-blank"
+      />
+      <label for="blank">新窗口打开</label>
+    </div>
+    <div class="box">
+      <input
+        type="radio"
+        id="global-self"
+        name="global-mode"
+        value="global-self"
+      />
+      <label for="self">当前窗口打开</label>
+    </div>
     <script src="/scripts/popup.js"></script>
   </body>
 </html>
