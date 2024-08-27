@@ -20,7 +20,9 @@ function bindEvent(mode) {
 }
 
 // 初次安装插件时，设置全局默认值
-chrome.runtime.onInstalled.addListener(() => {
+chrome.runtime.onInstalled.addListener((details) => {
+  // 注意：chrome更新时也会触发，所以需要排除新浏览器版本的情况
+  if (details.reason !== "install" && details.reason !== "update") return;
   chrome.storage.local.set({ global_mode: "default" });
 });
 
