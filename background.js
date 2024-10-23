@@ -7,9 +7,9 @@ function getDomainFromUrl(url) {
 // 全局代理a标签的点击事件
 function bindEvent(mode) {
   document.onclick = (e) => {
-    const linkElement = e.target.closest("a[href]") || {};
-    const href = linkElement.getAttribute("href");
-    if (!href || !href.startsWith("http") || mode === "default") return;
+    const linkElement = e.target.closest("a[href]");
+    const href = linkElement?.getAttribute("href");
+    if (!href || !href?.startsWith("http") || mode === "default") return;
 
     e.preventDefault();
     if (mode === "_blank") {
